@@ -1,0 +1,50 @@
+{
+  "host": "gpu02",
+  "platform": "Linux-3.10.0-1127.19.1.el7.x86_64-x86_64-with-glibc2.17",
+  "pytorch_version": "2.5.1+cu118",
+  "cuda_version": "11.8",
+  "cpu_threads": 4,
+  "config": {
+    "samples": 16384,
+    "width": 512,
+    "steps": 300,
+    "warmup": 20,
+    "repeats": 3,
+    "threads": 4,
+    "cpu_only": false,
+    "require_cuda": true,
+    "output": "results/benchmark-4023306.json"
+  },
+  "gpu": "NVIDIA A100-PCIE-40GB",
+  "timing_scope": "training steps only; setup, transfers, warmup and evaluation excluded",
+  "cpu": {
+    "seconds": [
+      23.70221669500461,
+      23.839307504997123,
+      24.218666728993412
+    ],
+    "median_seconds": 23.839307504997123,
+    "milliseconds_per_step": 79.4643583499904,
+    "rmse_meters": [
+      0.03840373829007149,
+      0.03840373829007149,
+      0.03840373829007149
+    ]
+  },
+  "cuda": {
+    "seconds": [
+      0.7285017559770495,
+      0.6802193879848346,
+      0.6807125530322082
+    ],
+    "median_seconds": 0.6807125530322082,
+    "milliseconds_per_step": 2.2690418434406943,
+    "rmse_meters": [
+      0.03840365633368492,
+      0.03840365633368492,
+      0.03840365633368492
+    ]
+  },
+  "gpu_speedup": 35.02110751271712,
+  "training_time_reduction_percent": 97.14457916661581
+}
