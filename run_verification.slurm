@@ -16,7 +16,7 @@ set -e
 module load python/2023-3
 
 eval "$(conda shell.bash hook)"
-conda activate pytorch-env
+conda activate pytorch-wheel
 
 cd "$SLURM_SUBMIT_DIR"
 
